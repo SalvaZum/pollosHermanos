@@ -300,7 +300,9 @@ input::placeholder, textarea::placeholder{
     }
     .carta{
         width: 90%;       
-        max-width: 250px; 
         margin: 10px auto;
+    }
+    .reseña{
+        width: 90%;
     }
 }
