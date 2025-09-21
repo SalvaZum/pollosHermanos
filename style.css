@@ -262,6 +262,9 @@ input::placeholder, textarea::placeholder{
     margin: 20px;
     transition: 0.4s;
 }
+.reseña p{
+    width: 100%;
+}
 .reseña:hover{
     box-shadow: 0px 0px 10px 2px var(--normal);
     transform: translateY(-5px);
@@ -296,6 +299,6 @@ input::placeholder, textarea::placeholder{
         flex-direction: column;
     }
     .carta{
-        width: 70%;
+        width: 300px;
     }
 }
