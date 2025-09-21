@@ -197,7 +197,6 @@ nav ul li a:hover{
     margin: 10px;
 }
 #producto{
-    width: 100%;
     flex-direction: column;
     background-color: var(--normal);
 }
@@ -300,6 +299,7 @@ input::placeholder, textarea::placeholder{
     }
     .carta{
         width: 90%;       
+        max-width: 250px; 
         margin: 10px auto;
     }
     .reseña{
