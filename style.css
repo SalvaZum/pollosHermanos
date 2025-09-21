@@ -1,0 +1,158 @@
+:root{
+    --blanco: white;
+    --normal: #c9651d;
+    --claro: #edd4a9;
+    --claro2: #ebab6f;
+    --oscuro: #57230f;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+    color: var(--blanco);
+    font-family: sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+}
+img{
+    height: 100px;
+    width: auto;
+}
+button{
+    background-color: var(--normal);
+    border: 0px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+
+    transition: 0.4s;
+}
+button:hover{
+    box-shadow: 0px 0px 10px 2px var(--normal);
+    transform: translateY(-5px);
+    transition: 0.4s;
+}
+section{
+    background-color: var(--claro2);
+    min-height: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background-color: var(--oscuro);
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.decorative-line{
+    height: 3px;
+    width: 20%;
+    margin-top: 5px;
+    background: linear-gradient(270deg, var(--claro2), var(--normal));
+    background-size: 800% 800%;
+    animation: moverFondo 2s linear infinite ;
+}
+.resaltado{
+    font-weight: 800;
+    color: var(--oscuro);
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    outline: var(--oscuro) solid 1px;
+
+    background-color: var(--claro2);
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    margin: 10px;
+    list-style: none;
+}
+nav ul li a:hover{
+    color: var(--normal);
+}
+.item {
+  position: relative;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: var(--normal);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.item:hover::after {
+  transform: scaleX(1);
+}
+#hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://st.depositphotos.com/5891300/57627/v/450/depositphotos_576277996-stock-illustration-roast-grilled-chicken-turkey-meat.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+#nosotros p{
+    width: 70%;
+    margin: 10px;
+}
+#producto{
+    flex-direction: column;
+    background-color: var(--normal);
+}
+.carta{
+    border: 3px solid transparent;
+    border-radius: 20px;
+
+    padding: 25px;
+    margin: 20px;
+
+    background: 
+    linear-gradient(var(--normal), var(--normal)) padding-box, 
+    linear-gradient( 270deg, var(--claro2), var(--claro), var(--claro2), var(--claro) ) border-box;
+    background-size: 300% 300%; 
+    animation: moverDegrade 2s linear infinite; 
+
+}
+.carta:hover{
+    box-shadow: 0px 0px 10px 2px var(--claro);
+    transform: translateY(-5px);
+    transition: 0.4s;
+}
+.carta h3{
+    margin-bottom: 20px;
+}
+@keyframes moverFondo {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes moverDegrade {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
