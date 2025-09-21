@@ -104,6 +104,9 @@ nav ul li a:hover{
   transform-origin: center;
   transition: transform 0.3s ease;
 }
+.item:active{
+    color: var(--normal);
+}
 .item:hover::after {
   transform: scaleX(1);
 }
@@ -169,6 +172,7 @@ nav ul li a:hover{
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    margin-right: 20px;
 }
 .hamburger div {
     width: 25px;
@@ -181,6 +185,12 @@ nav ul li a:hover{
     }
     .hamburger {
         display: flex;
+    }
+    .cartas{
+        flex-direction: column;
+    }
+    .carta{
+        width: 410px;
     }
 }
 #hero{
@@ -208,6 +218,8 @@ nav ul li a:hover{
     border: 3px solid transparent;
     border-radius: 20px;
 
+    width: 410px;
+    height: 150px;
     padding: 25px;
     margin: 20px;
 
