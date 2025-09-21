@@ -304,5 +304,6 @@ input::placeholder, textarea::placeholder{
     }
     .reseña{
         width: 90%;
+        max-width: 250px; 
     }
 }
