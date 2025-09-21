@@ -179,21 +179,6 @@ nav ul li a:hover{
     height: 3px;
     background: white; /* Cambia según tu header */
 }
-@media (max-width: 768px) {
-    nav ul{
-        display: none;
-    }
-    .hamburger {
-        display: flex;
-    }
-    .cartas{
-        width: 100%;
-        flex-direction: column;
-    }
-    .carta{
-        width: 80%;
-    }
-}
 #hero{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://st.depositphotos.com/5891300/57627/v/450/depositphotos_576277996-stock-illustration-roast-grilled-chicken-turkey-meat.jpg");
@@ -296,4 +281,19 @@ input::placeholder, textarea::placeholder{
 @keyframes moverDegrade {
   0%   { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
+}
+@media (max-width < 768px) {
+    nav ul{
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .cartas{
+        width: 100%;
+        flex-direction: column;
+    }
+    .carta{
+        width: 80%;
+    }
 }
