@@ -282,7 +282,7 @@ input::placeholder, textarea::placeholder{
   0%   { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
-@media (max-width < 768px) {
+@media(max-width:768px) {
     nav ul{
         display: none;
     }
@@ -290,10 +290,9 @@ input::placeholder, textarea::placeholder{
         display: flex;
     }
     .cartas{
-        width: 100%;
         flex-direction: column;
     }
     .carta{
-        width: 80%;
+        width: 70%;
     }
 }
