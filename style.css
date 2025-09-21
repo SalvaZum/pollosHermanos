@@ -190,7 +190,7 @@ nav ul li a:hover{
         flex-direction: column;
     }
     .carta{
-        width: 410px;
+        width: 80%;
     }
 }
 #hero{
@@ -218,8 +218,7 @@ nav ul li a:hover{
     border: 3px solid transparent;
     border-radius: 20px;
 
-    width: 410px;
-    height: 150px;
+    width: 40%;
     padding: 25px;
     margin: 20px;
 
