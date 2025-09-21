@@ -8,14 +8,30 @@
 </head>
 <body>
     <nav>
-        <img src="polloLogo.png" alt="">
+        <img src="imagenes/polloLogo.png" alt="">
         <ul>
             <li class="item"><a href="#hero">INICIO</a></li>
             <li class="item"><a href="#nosotros">NOSOTROS</a></li>
             <li class="item"><a href="#producto">PRODUCTOS</a></li>
             <li class="item"><a href="#reseñas">RESEÑAS</a></li>
         </ul>
+
+        <!-- Ícono hamburguesa para móvil -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
+
+    <!-- Overlay menú móvil -->
+   <div class="overlay" id="mobileMenu">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <li class="item"><a href="#hero">INICIO</a></li>
+        <li class="item"><a href="#nosotros">NOSOTROS</a></li>
+        <li class="item"><a href="#producto">PRODUCTOS</a></li>
+        <li class="item"><a href="#reseñas">RESEÑAS</a></li>        
+    </div>
 
     <section id="hero" style="height: 600px;">
         <h1>Pollos Hermanos</h1>
@@ -60,15 +76,25 @@
     </section>
 
     <section id="reseñas">
+        <div class="formulario">
+            <h3>Rompe el hielo 🧊</h3>
+            <h4>Cuentanos tu experiencia con nosotros</h4>
+            <form id="reseñaForm" class="display" action="index.html">
+                <input id="nombre" type="text" placeholder="Ingresa tu nombre completo" required>
+                <textarea name="" id="comentario" placeholder="Escribe tu reseña aquí" required></textarea>
+                <button type="submit">Envia tu reseña 💪</button>
+            </form>
+        </div>
+
         <h2>Reseñas</h2>
         <div class="decorative-line"></div>
-        <div id="container-reseñas"> <!-- Aca van las reseñas segun la base de datos --> </div>
+        <div id="container-reseñas" class="display"> <!-- Aca van las reseñas segun la base de datos --> </div>
     </section>
 
     <footer class="display">
         <p>@Copyright 2025</p>
     </footer>
 
-    <script src="java.js"></script>
+    <script type="module" src="java.js"></script>
 </body>
 </html>

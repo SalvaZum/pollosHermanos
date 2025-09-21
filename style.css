@@ -24,7 +24,6 @@ button{
     border: 0px;
     border-radius: 20px;
     padding: 10px;
-    margin: 10px;
 
     transition: 0.4s;
 }
@@ -39,8 +38,8 @@ section{
     padding: 20px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
 .display{
     display: flex;
@@ -57,7 +56,9 @@ footer{
     height: 3px;
     width: 20%;
     margin-top: 5px;
-    background: linear-gradient(270deg, var(--claro2), var(--normal));
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: linear-gradient(270deg, var(--oscuro), var(--normal));
     background-size: 800% 800%;
     animation: moverFondo 2s linear infinite ;
 }
@@ -73,6 +74,7 @@ nav{
     position: fixed;
     top: 0;
     outline: var(--oscuro) solid 1px;
+    z-index: 10;
 
     background-color: var(--claro2);
 }
@@ -103,6 +105,82 @@ nav ul li a:hover{
 }
 .item:hover::after {
   transform: scaleX(1);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--normal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    
+}
+.overlay.show {
+    transform: translateY(0);
+}
+.overlay a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+.overlay a:hover {
+    color: var(--oscuro);
+    font-size: 24px;
+    text-decoration: none;
+}
+.overlay li{
+    list-style: none;
+    display: inline-block;
+}
+.overlay .item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* ajusta según tu diseño */
+    width: 100%;
+    height: 2px;
+    background: var(--oscuro); /* o el color que quieras */
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+.overlay .item:hover::after {
+    transform: scaleX(1);
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white; /* Cambia según tu header */
+}
+@media (max-width: 768px) {
+    nav ul{
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
 }
 #hero{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -146,6 +224,47 @@ nav ul li a:hover{
 }
 .carta h3{
     margin-bottom: 20px;
+}
+.formulario{
+    margin: 50px;
+    max-width: 80%;
+}
+form{
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+input, textarea{
+    margin: 10px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid transparent;
+
+    background: 
+    linear-gradient(var(--claro2), var(--claro2)) padding-box, 
+    linear-gradient(270deg, var(--oscuro), var(--normal), var(--oscuro), var(--normal)) border-box;
+    background-size: 300% 300%;
+    animation: moverDegrade 2s linear infinite;
+}
+input, textarea::placeholder{
+    color: white;
+}
+#container-reseñas{
+    max-width: 100%;
+    flex-flow: wrap;
+}
+.reseña{
+    max-width: 30%;
+    border: 2px solid var(--normal);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    transition: 0.4s;
+}
+.reseña:hover{
+    box-shadow: 0px 0px 10px 2px var(--normal);
+    transform: translateY(-5px);
+    transition: 0.4s;
 }
 @keyframes moverFondo {
   0%   { background-position: 0% 50%; }
