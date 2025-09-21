@@ -299,6 +299,8 @@ input::placeholder, textarea::placeholder{
         flex-direction: column;
     }
     .carta{
-        width: 300px;
+        width: 90%;       
+        max-width: 400px; 
+        margin: 10px auto;
     }
 }
