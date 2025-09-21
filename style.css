@@ -187,6 +187,7 @@ nav ul li a:hover{
         display: flex;
     }
     .cartas{
+        width: 100%;
         flex-direction: column;
     }
     .carta{
